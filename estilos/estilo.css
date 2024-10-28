@@ -1,0 +1,255 @@
+/*modi screen start*/
+*{
+    margin: 1rem;
+}
+/*modi screen end*/
+
+
+/*header start*/
+header{
+    display: flex;
+    justify-content: center;        
+}
+/*header end*/
+
+
+/*navbar start*/
+nav{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 50px;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+
+a{
+    position: relative;
+    cursor: pointer;
+    color: black;
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+    transition: color 0.25s;
+    size: 20px;
+    text-decoration: none;
+}
+
+a::after{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: rgb(127, 185, 233);
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+
+a:hover{
+    color: black;
+    outline: 0;
+}
+
+a:hover::after{
+    scale: 1;
+}
+
+ol{
+    list-style: none;
+}
+/*navbar End*/
+
+
+/*body Start*/
+body{
+    background: linear-gradient(rgb(119, 205, 216), white);
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    background-attachment: fixed;
+}
+/*body end*/
+
+
+/*quienes somos start*/
+.info{
+    display: flex;
+    background-color: rgb(153, 215, 231);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px ;
+}
+
+.info img{
+    border-radius: 50%;
+    border: 3px solid;
+    
+}
+
+.info p{
+    font-size: 20px;
+}
+/*quienes somos end*/
+
+
+/*casos start*/
+.slider-frame{
+    width: 1280px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.slider-frame ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: slide 16s infinite alternate ease-in-out;
+}
+
+.slider-frame li{
+    list-style: none;
+    width: 100%;
+}
+
+.slider-frame img{
+    width: 100%
+}
+
+@keyframes slide{
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+}
+/*casos end*/
+
+
+/*especialidades start*/
+.espemain{
+    display: flex;
+    justify-content: center;
+}
+
+.espe1{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px ;
+    
+}
+
+.espe1 img{
+    width: 40%;
+    border-radius: 15px;
+    max-width: 300px;
+}
+
+.espe2{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px ;
+}
+
+.espe2 img{
+    width: 90%;
+    border-radius: 15px;
+    max-width: 300px;
+}
+
+.espe3{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px ;
+}
+
+.espe3 img{
+    width: 90%;
+    border-radius: 15px;
+    max-width: 300px;
+}
+/*especialidades end*/
+
+
+/*servicio start*/
+.servi{
+    display: flex;
+    justify-content: center;
+    background-image: url(https://clinicacemeq.es/dental/wp-content/uploads/2023/03/que-es-el-diseno-de-sonrisas-e1678190159827.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    padding: 3px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px ;
+}
+
+.liba .praba {
+    text-align: center;
+}
+
+.liba ul{
+    font-size: larger;
+    color: brown;
+}
+
+.praba ul{
+    font-size: larger;
+    color: brown;
+}
+/*servicio end */
+
+
+/*contacto start*/
+.foncontac{
+    background-color: rgb(153, 215, 231);
+    padding: 3px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px ;
+}
+
+
+.formcontac{
+    text-align: center;
+    display: flex;
+}
+/*contacto end*/
+
+
+/*modificaciones para dsipositivos moviles*/
+@media (max-width:600px){
+    *{
+        align-items: center;
+        margin: 1rem;
+    }
+
+    nav{
+        gap: 15px;
+        align-items: center;
+    }
+
+    a{
+        font-size: 16px;
+        padding: 0.5rem;
+    }
+
+    .info{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .espemain{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servi{
+        padding: 10px;
+    }
+
+}
